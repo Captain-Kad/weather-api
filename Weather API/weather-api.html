@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h1 style="text-align: center">Weather API</h1>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <select 
+            id="citySelect"
+            class="form-control form-control-lg select-opt">
+            <option value="disabled" selected disabled>Select a City</option>
+            <option id="Lagos" value="Lagos">Lagos</option>
+            <option id="New York" value="New York">New York</option>
+            <option id="Chicago" value="Chicago">Chicago</option>
+            <option id="Washington" value="Washington">Washington</option>
+            <option id="Toronto" value="Toronto">Toronto</option>
+            <option id="Houston" value="Houston">Houston</option>
+            <option id="Phoenix" value="Phoenix">Phoenix</option>
+            <option id="Philadelphia" value="Philadelphia">Philadelphia</option>
+            <option id="Mississauga" value="Mississauga">Mississauga</option>
+            <option id="Seattle" value="Seattle">Seattle</option>
+          </select>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <button
+            style="width: 100%"
+            id="button"
+            class="btn btn-primary btn-area"
+            onclick="displayCityWeather()">
+            Check Weather
+          </button>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 alert alert-success" style="height: 90px; width: 100%;">
+          <h2><span id="result"></span></h2>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="get-temp.js"></script>
+  </body>
+</html>
